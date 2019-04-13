@@ -1,14 +1,32 @@
 {
   "name": "extra-life",
   "version": "1.0.0",
-  "description": "Extra-Life API wrapper for JavaScript in the browser and Node.js.",
+  "description": "Extra Life API wrapper for JavaScript in the browser and Node.js.",
   "author": "Michael Irigoyen <goyney@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "extra",
+    "life",
+    "api",
+    "extralife",
+    "extra-life",
+    "donor",
+    "donordrive",
+    "donor-drive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goyney/extra-life.git"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "dist/main.js",
   "module": "dist/module.js",
   "browser": "dist/browser.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "publish:dry": "yarn build; npm publish --dry-run"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
