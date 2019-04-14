@@ -8,6 +8,7 @@ export default url => {
           return reject(new Error(`Bad Request: ${res.statusCode}`));
         }
 
+        const numRecords = res.headers['num-records'];
         let data = '';
 
         res.on('data', chunk => {
@@ -15,6 +16,13 @@ export default url => {
         });
 
         res.on('end', () => {
+          if (numRecords !== undefined) {
+            return resolve({
+              totalRecords: parseInt(numRecords),
+              records: JSON.parse(data)
+            });
+          }
+
           return resolve(JSON.parse(data));
         });
       })

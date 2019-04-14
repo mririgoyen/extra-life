@@ -1,5 +1,5 @@
 import jscc from 'rollup-plugin-jscc';
-// import { terser } from 'rollup-plugin-terser';
+import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
 
@@ -13,7 +13,7 @@ export default [
     },
     external: ['https'],
     plugins: [
-      // terser()
+      terser()
     ]
   },
   {
@@ -35,7 +35,7 @@ export default [
       jscc({
         values: { _BROWSER: true }
       }),
-      // terser()
+      terser()
     ]
   }
 ];
