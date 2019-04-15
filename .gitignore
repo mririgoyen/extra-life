@@ -1,6 +1,5 @@
 coverage
 dist
 node_modules
-sample
 .DS_Store
 *.log

@@ -25,7 +25,7 @@ The interfaces exposed are based off of the
 
 ---
 
-## Usage
+## Sample Usage
 
 ### Node.js
 
@@ -33,9 +33,7 @@ In Node, it is as simple as requiring the module and using it.
 
 ```js
 const extraLife = require('extra-life');
-
-const teamInfo = extraLife.getTeam(45209);
-console.log(teamInfo);
+extraLife.getTeam(45209).then(console.log);
 ```
 
 ### Browser
@@ -45,9 +43,7 @@ project that will be transpiled.
 
 ```js
 import { getTeam } from 'extra-life';
-
-const teamInfo = getTeam(45209);
-console.log(teamInfo);
+const teamInfo = getTeam(45209).then(console.log);
 ```
 
 The second way is to include the raw `extra-life.js` file from this package directly in your HTML
@@ -56,7 +52,7 @@ and then access the `extraLife` variable to make your API calls.
 ```html
 <script src="path/to/extra-life.js"></script>
 <script>
-extraLife.getTeam(45209).then(teamInfo => console.log(teamInfo));
+extraLife.getTeam(45209).then(console.log);
 </script>
 ```
 
@@ -64,7 +60,11 @@ extraLife.getTeam(45209).then(teamInfo => console.log(teamInfo));
 
 ## API
 
-All methods defined below will return payload data in accordance with the
+All methods defined below return
+[ES6 Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+You can use simple `.then()` notation or `async`/`await`, depending on your preference.
+
+The payload returned for each method will be in accordance with the
 [DonorDrive documentation](https://github.com/DonorDrive/PublicAPI/tree/master/docs/1.0).
 The few methods that optionally take a `limit` and a `page` will return a response object
 with a `totalRecords` count and the results in a `records` array:
