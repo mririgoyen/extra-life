@@ -23,7 +23,9 @@
   ],
   "main": "dist/main.js",
   "module": "dist/module.js",
-  "browser": "dist/extra-life.js",
+  "browser": {
+    "./dist/main.js": "./dist/extra-life.js"
+  },
   "scripts": {
     "build": "rollup -c",
     "publish:dry": "yarn build; npm publish --dry-run"

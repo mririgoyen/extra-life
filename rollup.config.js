@@ -25,7 +25,7 @@ export default [
         sourcemap: true
       },
       {
-        file: pkg.browser,
+        file: pkg.browser[`./${pkg.main}`],
         format: 'iife',
         name: 'extraLife',
         sourcemap: true
