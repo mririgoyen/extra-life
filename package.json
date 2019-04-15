@@ -1,6 +1,6 @@
 {
   "name": "extra-life",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extra Life API wrapper for JavaScript in the browser and Node.js.",
   "author": "Michael Irigoyen <goyney@gmail.com>",
   "license": "MIT",
@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "publish": "yarn build; npm publish",
     "publish:dry": "yarn build; npm publish --dry-run"
   },
   "devDependencies": {
