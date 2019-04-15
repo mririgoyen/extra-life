@@ -64,15 +64,25 @@ extraLife.getTeam(45209).then(teamInfo => console.log(teamInfo));
 
 ## API
 
+All methods defined below will return payload data in accordance with the
+[DonorDrive documentation](https://github.com/DonorDrive/PublicAPI/tree/master/docs/1.0).
+The few methods that optionally take a `limit` and a `page` will return a response object
+with a `totalRecords` count and the results in a `records` array:
+
+```js
+{
+  totalRecords: 100,
+  records: [...]
+}
+```
+
 ### Participants
 
 Each method here, with the exception of `getParticipants`, requires a `participantId`. You can
 get a `participantId` from the results of `getParticipant`, or from the URL of a participant
 on the Extra Life website.
 
-The URL will look like:
-
-`https://extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=[PARTICIPANT ID HERE]`
+The URL will look like: `https://extra-life.org/index.cfm?fuseaction=donordrive.participant&participantID=[PARTICIPANT ID HERE]`
 
 ---
 
@@ -119,9 +129,7 @@ Each method here, with the exception of `getTeams`, requires a `teamId`. You can
 `teamId` from the results of `getTeam`, or from the URL of a team on the Extra Life
 website.
 
-The URL will look like:
-
-`https://www.extra-life.org/index.cfm?fuseaction=donordrive.team&teamID=[TEAM ID HERE]`
+The URL will look like: `https://www.extra-life.org/index.cfm?fuseaction=donordrive.team&teamID=[TEAM ID HERE]`
 
 ---
 
