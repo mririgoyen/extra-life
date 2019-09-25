@@ -43,7 +43,7 @@ project that will be transpiled.
 
 ```js
 import { getTeam } from 'extra-life';
-const teamInfo = getTeam(45209).then(console.log);
+getTeam(45209).then(console.log);
 ```
 
 The second way is to include the raw `extra-life.js` file from this package directly in your HTML
