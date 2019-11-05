@@ -1,6 +1,6 @@
 import get from './request/get';
 
-const BASE_URL = 'https://extra-life.org/api';
+const BASE_URL = 'https://www.extra-life.org/api';
 
 const buildQueryString = (limit, page) => {
   const parsedLimit = parseInt(limit);

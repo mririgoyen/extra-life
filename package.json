@@ -1,6 +1,6 @@
 {
   "name": "extra-life",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Extra Life API wrapper for JavaScript in the browser and Node.js.",
   "author": "Michael Irigoyen <goyney@gmail.com>",
   "license": "MIT",
