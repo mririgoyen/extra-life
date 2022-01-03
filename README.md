@@ -94,6 +94,8 @@ Available methods:
 - [getParticipantBadges](#getParticipantBadges)
 - [getParticipantDonations](#getParticipantDonations)
 - [getParticipantDonors](#getParticipantDonors)
+- [getParticipantMilestones](#getParticipantMilestones)
+- [getParticipantIncentives](#getParticipantIncentives)
 
 ---
 
@@ -120,6 +122,14 @@ Retrieves all donataions a given participant has received.
 #### `getParticipantDonors(participantId, limit = 100, page = 1)`
 
 Retrieves all donors whom have donated to a given participant.
+
+#### `getParticipantMilestones(participantId, limit - 100, page = 1)`
+
+Retrieves the milestones a given participant has set.
+
+#### `getParticipantIncentives(participantId, limit - 100, page = 1)`
+
+Retrieves the inventives a given participant has set.
 
 ---
 
