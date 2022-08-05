@@ -2,7 +2,7 @@
   "name": "extra-life",
   "version": "1.0.5",
   "description": "Extra Life API wrapper for JavaScript in the browser and Node.js.",
-  "author": "Michael Irigoyen <goyney@gmail.com>",
+  "author": "Michael Irigoyen <michael@irigoyen.dev>",
   "license": "MIT",
   "keywords": [
     "extra",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/goyney/extra-life.git"
+    "url": "https://github.com/mririgoyen/extra-life.git"
   },
   "files": [
     "dist"
