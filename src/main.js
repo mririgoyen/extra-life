@@ -19,6 +19,8 @@ export const getParticipantActivity = async participantId => await get(`${BASE_U
 export const getParticipantBadges = async participantId => await get(`${BASE_URL}/participants/${participantId}/badges`);
 export const getParticipantDonations = async (participantId, limit, page) => await get(`${BASE_URL}/participants/${participantId}/donations${buildQueryString(limit, page)}`);
 export const getParticipantDonors = async (participantId, limit, page) => await get(`${BASE_URL}/participants/${participantId}/donors${buildQueryString(limit, page)}`);
+export const getParticipantMilestones = async (participantId, limit, page) => await get(`${BASE_URL}/participants/${participantId}/milestones${buildQueryString(limit, page)}`);
+export const getParticipantIncentives = async (participantId, limit, page) => await get(`${BASE_URL}/participants/${participantId}/Incentives${buildQueryString(limit, page)}`);
 
 // Teams
 // https://github.com/DonorDrive/PublicAPI/blob/master/docs/1.0/resources/teams.md
